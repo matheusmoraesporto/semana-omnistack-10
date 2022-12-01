@@ -1,0 +1,24 @@
+import React, { useState } from 'react';
+// import Header from './Header';
+
+// Function que retorna um HTML (JSX)
+// App é um componente - um componente é uma função que retorna um html
+function App() {
+  const [counter, setCounter] = useState(0);
+  
+  // Toda função exclusiva de um componente é criada dentro do mesmo
+  function incrementCounter() {
+    setCounter(counter + 1);
+  }
+  
+  return (
+    //Fragment: funciona semelhante a uma div, com a diferença que não quebra o layout e não encapsula os componentes a baixo
+    // é utilizado para quando repetimos componentes, como no exemplo
+    <>
+      <h1>Contador: {counter}</h1>
+      <button onClick={incrementCounter}>Incrementar</button>
+    </>
+  );
+}
+
+export default App;

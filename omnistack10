@@ -1,0 +1,54 @@
+Omnistack 10
+
+Comandos terminal
+	- npm init -y => cria o package json
+	- npm install nodemon -D => faz com que o servidor fique monitorando alterações no código para ser atualizado. -D para que seja apenas em desenvolvimento
+	- yarn add express => importa as pastas do express
+	- node index.js => sobre o servidor da aplicação
+	- ctrl + c => pausa o servidor
+	- yarn add nodemon -D => para atualizar a página da aplicação após salvar alguma alteração
+	- yarn add mongoose => faz com que a aplicação se comunique com o mongodb
+	- yarn start => roda a aplicação web
+	
+MongoDB
+	- banco não relacional
+	- hospedado na nuvem, não precisa instalar
+	- "__v" => variável de versionamento do mongo
+	- mongo operators on google - mostra todos os operadores lógicos do mongo
+	
+Package.json
+	- Adicionar em "scripts" "start": "nodemon index.js"
+	
+Exemplos na route.js
+	// Tipos de parâmetros
+	// Query params (Filtros, paginação, ordenação)
+	// Route params (Identificar um recurso na alteração ou remoção)
+	// Body - request.body - (Dados para criação ou alteração de um registro)
+	
+	// Apenas barra direciona a plicação base, poderia indicar algum outro caminho como por exmplo '/users'
+	routes.get('/', (request, response) => {
+		return response.json({message: 'Hello OmniStack JS'});
+	} );
+	
+	// Exemplo delete com Route params
+	routes.delete('/devs/:id', (request, response) => {
+		return response.json({message: 'Hello OmniStack JS'});
+	} );
+	
+React
+	- Principais conceitos: componente, estado e propriedade
+	- Por padrão cria-se apenas um componente por arquivo
+	- Propriedades são os atributos html, por exemplo title=""dashboard
+	- Ou seja, informações que o componente pai passa para o filho
+	- Estado: informações mantidas pelo componente (Importante: imutabilidade)
+	- Para propriedades do html, não palavras reservadas do javascript, exemplo class vira className, for vira htmlFor7
+	
+Expo
+	- Utiliza 'coisas' de android e IOS, por exemplo câmera
+	
+ReactNative
+	- Tags são do ReactNative, não do html
+	- Estilizações são feitas via CSS e não com atributos HTML
+	
+WebSocket
+	- Biblioteca para requisisções do back para o front, sem que o front faça a chamada, o back é que enviará por conta própria, sem chamadas api
